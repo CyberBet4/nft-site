@@ -52,16 +52,11 @@
                     <div class="modal_body text-center">
                         <p>Sign up to start minting</p>
                         <div class="connect-section">
-                            {{-- <ul class="heading-list">
-                                <li><a href="#" class="connect-meta"><span><img src="fonts/ITp8Ul2at9rW.svg" alt="Meta-mask-Image"></span>MetaMask</a></li>
-                                <li><a href="#"><span><img src="fonts/Dhh7RMsS75Jy.svg" alt="Coinbase-Image"></span>Coinbase</a></li>
-                                <li><a href="#"><span><img src="fonts/oZtTfDUXLcJt.svg" alt="Trust-Image"></span>Trust Wallet</a></li>
-                                <li><a href="#"><span><img src="fonts/mN9Tl4hjN34v.svg" alt="Wallet-Image"></span>WalletConnect</a></li>
-                            </ul> --}}
-                            <form action="" method="post">
-                                <input type="text" class="custom-form-control" placeholder="Name">
-                                <input type="text" class="custom-form-control" placeholder="Email address">
-                                <input type="text" class="custom-form-control" placeholder="Password">
+                            <form action={{route("signup")}} method="post">
+                            @csrf
+                                <input type="text" class="custom-form-control" name="name" placeholder="Name">
+                                <input type="email" class="custom-form-control" name="email" placeholder="Email address">
+                                <input type="password" class="custom-form-control" name="password" placeholder="Password">
                                 <button type="submit" class="custom-btn">Sign Up</button> 
                             </form>
                         </div>
@@ -77,3 +72,48 @@
     </div>
 </div>
 <!-- Connect Wallet Modal -->
+
+
+
+{{-- LOGIN MODAL --}}
+<!-- Connect Wallet Modal -->
+<div class="connect_modal"> 
+    <div class="modal fade " id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal_overlay">
+                    <div class="modal_header">
+                        <h2>LOGIN</h2>
+                        <button data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="modal_body text-center">
+                        <p>Sign up to start minting</p>
+                        <div class="connect-section">
+                            <form action={{route("login")}} method="post">
+                            @csrf
+                                <input type="email" class="custom-form-control" name="email" placeholder="Email address">
+                                <input type="password" class="custom-form-control" name="password" placeholder="Password">
+                                <button type="submit" class="custom-btn">Login</button> 
+                            </form>
+                        </div>
+                        {{-- <h6>By L up, you agree to our <a href="#">Terms of Service</a> and our <a href="#">Privacy Policy</a>.</h6> --}}
+                    </div>
+                    <div class="modal_bottom_shape">
+                        <span class="modal_bottom_shape_left"><img src="fonts/ltcdonq8ZksZ.svg" alt></span>
+                        <span class="modal_bottom_shape_right"><img src="fonts/ltcdonq8ZksZ.svg" alt></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Connect Wallet Modal -->
+
+@error('email')
+<div class="alert alert-danger" style="position: absolute; top: 10%; left: 50%; box-shadow: 2px 3px 25px rgba(0,0,0,0.5); transform: translateX(-50%);">
+    {{ $message }}
+</div>
+    
+@enderror

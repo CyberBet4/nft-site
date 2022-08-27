@@ -14,14 +14,43 @@
                         <li><a href={{ route("home")}}>Home</a></li>
                         {{-- <li><a href="#about">About</a></li> --}}
                         <li><a href="#roadmap">Roadmap</a></li>
-                        <li><a href="#team">Team</a></li>
+                        <li><a href={{ route("collection")}}>Collection</a></li>
                         <li><a href="#faq">FAQ</a></li>
                         <li><a href={{ route("about")}}>About Us</a></li>
-                    </ul>
+                    </ul>   
                 </div>
+
+                @auth
+
                 <div class="bithu_menu_right_buttons">
-                    <button class="join_btn hov_shape_show">
-                        Sign up
+                    <button href={{route('dashboard')}} class="join_btn hov_shape_show">
+                        Dashboard
+                        <span class="hov_shape1"><img src="fonts/dle9yZdldMMf.svg" alt></span>
+                        <span class="hov_shape2"><img src="fonts/dle9yZdldMMf.svg" alt></span>
+                        <span class="square_hov_shape"></span>
+                    </button>
+                    <button class="menu_bar"><i class="fa-solid fa-bars"></i></button>
+                    <div class="connect-btn-wrapper">
+                        <form action={{ route("logout")}} method="post">
+                        @csrf
+                        <button class="connect_btn hov_shape_show" data-bs-toggle="modal" data-bs-target="#connectModal">
+                            {{-- <img src="fonts/q8IEPqIkVjHt.svg" alt>CONNECT --}}
+                            Logout
+                            <span class="hov_shape1"><img src="fonts/dle9yZdldMMf.svg" alt></span>
+                            <span class="hov_shape2"><img src="fonts/dle9yZdldMMf.svg" alt></span>
+                            <span class="square_hov_shape"></span>
+                        </button>
+                        </form>
+                    </div>
+                </div>
+          
+                @endauth
+          
+                @guest
+                
+                <div class="bithu_menu_right_buttons">
+                    <button class="join_btn hov_shape_show" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Login
                         <span class="hov_shape1"><img src="fonts/dle9yZdldMMf.svg" alt></span>
                         <span class="hov_shape2"><img src="fonts/dle9yZdldMMf.svg" alt></span>
                         <span class="square_hov_shape"></span>
@@ -30,13 +59,14 @@
                     <div class="connect-btn-wrapper">
                         <button class="connect_btn hov_shape_show" data-bs-toggle="modal" data-bs-target="#connectModal">
                             {{-- <img src="fonts/q8IEPqIkVjHt.svg" alt>CONNECT --}}
-                            Login
+                            Signup
                             <span class="hov_shape1"><img src="fonts/dle9yZdldMMf.svg" alt></span>
                             <span class="hov_shape2"><img src="fonts/dle9yZdldMMf.svg" alt></span>
                             <span class="square_hov_shape"></span>
                         </button>
                     </div>
                 </div>
+                @endguest
             </div>
         </div>
         <!-- Main Menu END -->
@@ -53,7 +83,7 @@
                         <li class="mobile-menu-hide"><a href="#home">Home</a></li>
                         {{-- <li class="mobile-menu-hide"><a href="#about">About</a></li> --}}
                         <li class="mobile-menu-hide"><a href="#roadmap">Roadmap</a></li>
-                        <li class="mobile-menu-hide"><a href="#team">Team</a></li>
+                        <li class="mobile-menu-hide"><a href={{ route("collection")}}>Collection</a></li>
                         <li class="mobile-menu-hide"><a href="#faq">FAQ</a></li>
                         <li class="mobile-menu-hide"><a href={{ route("about")}}>About Us</a></li>
                     </ul>
