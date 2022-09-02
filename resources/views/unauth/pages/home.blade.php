@@ -9,13 +9,13 @@
                     <h2>Crazy Meta 🎯 NFT collections</h2>
                     <h3><span class="count">5555</span> / 5555 Minted</h3>
                     <div class="bithu_v1_baner_buttons">
-                        <button class="mint_btn hov_shape_show" data-bs-toggle="modal" data-bs-target="#mintModal">
+                        <button class="mint_btn hov_shape_show" data-bs-toggle="modal" data-bs-target="#connectModal">
                             Mint now
                             <span class="hov_shape1"><img src="fonts/vGhzZOTJHJLZ.svg" alt></span>
                             <span class="hov_shape2"><img src="fonts/vGhzZOTJHJLZ.svg" alt></span>
                             <span class="square_hov_shape_dark"></span>
                         </button>
-                        <button class="widhlist_btn hov_shape_show">
+                        <button class="widhlist_btn hov_shape_show" data-bs-toggle="modal" data-bs-target="#connectModal">
                             Whitelist Now
                             <span class="hov_shape1"><img src="fonts/ltcdonq8ZksZ.svg" alt></span>
                             <span class="hov_shape2"><img src="fonts/ltcdonq8ZksZ.svg" alt></span>
@@ -24,7 +24,7 @@
                     </div>
                     <ul>
                         <li>Max 2 NFTs per wallet . Price 0.09 ETH + gas</li>
-                        <li>MINT IS LIVE <span>UNTIL 25 APR 04:00H</span></li>
+                        {{-- <li>MINT IS LIVE <span>UNTIL 25 APR 04:00H</span></li> --}}
                         <li>Presale : SOLDOUT</li>
                     </ul>
                 </div>
@@ -119,7 +119,7 @@
             <ul>
                 <li>
                     <h4 class="green">1</h4>
-                    <p>Connect Your Wallet</p>
+                    <p>Fund Your Wallet</p>
                 </li>
                 
                 <li>
@@ -129,7 +129,7 @@
                 
                 <li>
                     <h4 class="yellow">3</h4>
-                    <p>Confiem the Transaction</p>
+                    <p>Confirm the Transaction</p>
                 </li>
                 
                 <li>
@@ -153,8 +153,12 @@
                         <h3>About Us</h3>
                     </div>
                     <div class="v1_about_us_right_text">
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur cites of the word in classical literature.</p>
-                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original a latin professor at Hampden-Sydney</p>
+                        <p>
+                            A core part of our vision is that open protocols like Ethereum and interoperable standards like ERC-721 and ERC-1155 will enable vibrant new economies. We're building tools that allow consumers to trade their items freely, creators to launch new digital works, and developers to build rich, integrated marketplaces for their digital items.
+                        </p>
+                        <p>
+                            As a company, we’re thrilled to be at the center of this growing industry, and will continue to invest in our core infrastructure as we build the most accessible marketplace for buyers, sellers, and creators.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -195,7 +199,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="about_us_text_card">
-                        <h3><img src="images/aw4crJFhWwXp.png" alt>Gamming NFTs</h3>
+                        <h3><img src="images/aw4crJFhWwXp.png" alt>Gaming NFTs</h3>
                         <p>Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure.</p>
                     </div>
                 </div>
@@ -218,7 +222,7 @@
     </div>
 </div>
 <!-- About Us section End -->
-
+{{-- 
 <!-- Roadmap Section Start-->
 <div class="v1_roadmap_sect" id="roadmap">
     <div class="container">
@@ -279,7 +283,7 @@
         <img src="images/cqynv4f0MBtH.png" alt>
     </div>
 </div>
-<!-- Roadmap Section End-->
+<!-- Roadmap Section End--> --}}
 
 <!-- Team Section Start-->
 <div class="bithu_team_sect v1_team_sect" id="team">
@@ -453,14 +457,17 @@
             <div class="bithu_faq_questions">
                 <div class="faq_questions">
                     <h2 class="accordion no-border">
-                        What is MiNFT ?
+                        What is an NFT ?
                         <span>
                             <img src="fonts/xOWjPnRGnULa.svg" alt class="img-fluid IconPlus">
                             <img src="fonts/AUNArCKsA6El.svg" alt class="Img-fluid IconMunise">
                         </span>
                     </h2>
                     <div class="accordion-panel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>
+                            A non-fungible token (NFT) is a cryptographic token that represents a unique asset. They function as verifiable proofs of authenticity and ownership within a blockchain network. NFTs are not interchangeable with each other and introduce scarcity to the digital world.
+
+                        </p>
                     </div>
 
                     <h2 class="accordion">
@@ -471,52 +478,25 @@
                         </span>
                     </h2>
                     <div class="accordion-panel">
-                        <p>It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur cites of the word in classical literature.</p>
+                        <p>
+                            For NFTs with a fixed price, click the [Buy] button on the product page and complete the transaction. Once the transaction is successful, we will transfer the NFT to your wallet and the seller will receive the funds. For NFTs on auction, click [Make an offer], place your bid price, and confirm the offer. In the event of someone placing a higher bid than you, your funds will be unlocked. To join the auction again, you’ll have to place a new bid.
+
+                        </p>
                     </div>
 
                     <h2 class="accordion">
-                        Why we should choose MiNFT ?
+                        How do I sell ?
                         <span>
                             <img src="fonts/xOWjPnRGnULa.svg" alt class="img-fluid IconPlus">
                             <img src="fonts/AUNArCKsA6El.svg" alt class="Img-fluid IconMunise">
                         </span>
                     </h2>
                     <div class="accordion-panel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>
+                            To list an NFT for sale, our team will first of all approve the content to make sure it’s appropriate for listing. This process usually takes 4-8 hours. Upon successful approval, your NFT will list immediately on the Marketplace as either an auction or fixed price sale, according to your preference. Alternatively, you can also choose to list your NFT at a fixed time (with a minimum of 12 hours after approval).
+                        </p>
                     </div>
 
-                    <h2 class="accordion">
-                        Where we can buy and sell NFts ?
-                        <span>
-                            <img src="fonts/xOWjPnRGnULa.svg" alt class="img-fluid IconPlus">
-                            <img src="fonts/AUNArCKsA6El.svg" alt class="Img-fluid IconMunise">
-                        </span>
-                    </h2>
-                    <div class="accordion-panel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-
-                    <h2 class="accordion">
-                        How secure is this token ?
-                        <span>
-                            <img src="fonts/xOWjPnRGnULa.svg" alt class="img-fluid IconPlus">
-                            <img src="fonts/AUNArCKsA6El.svg" alt class="Img-fluid IconMunise">
-                        </span>
-                    </h2>
-                    <div class="accordion-panel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-
-                    <h2 class="accordion">
-                        What is your contract address ?
-                        <span>
-                            <img src="fonts/xOWjPnRGnULa.svg" alt class="img-fluid IconPlus">
-                            <img src="fonts/AUNArCKsA6El.svg" alt class="Img-fluid IconMunise">
-                        </span>
-                    </h2>
-                    <div class="accordion-panel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
                 </div>
                 <div class="faq_bg_wattermark">
                     <img src="images/JNakYtmg6WD4.png" alt>
@@ -611,7 +591,7 @@
                                 <a href="#"><img src="images/joBZxIguxAmy.png" alt></a>
                             </div>
                             <div class="copiright_text pl-40">
-                                Copyright © 2022 Bithu
+                                Copyright © 2022 FlameCat
                             </div>
                         </div>
                         <a href="#" class="bact_to_top_btn"><img src="fonts/9erIaZQILgnb.svg" alt></a>
@@ -704,7 +684,7 @@
 
                             </ul>
                         </div>
-                        <button class="modal_mint_btn hov_shape_show">
+                        <button class="modal_mint_btn hov_shape_show" data-bs-toggle="modal" data-bs-target="#connectModal">
                             MINT NOW
                             <span class="hov_shape1"><img src="fonts/vGhzZOTJHJLZ.svg" alt></span>
                             <span class="hov_shape2"><img src="fonts/vGhzZOTJHJLZ.svg" alt></span>

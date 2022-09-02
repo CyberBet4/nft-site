@@ -371,7 +371,7 @@
                         <div class="footer_menu">
                             <div class="bottom_footer_left">
                                 <div class="copiright_text">
-                                    <a href="#">Copyright ©2022 Bithu, All rights reserved.</a>
+                                    <a href="#">Copyright ©2022 FlameCat, All rights reserved.</a>
                                 </div>
                             </div>
                             <a href="#" class="bact_to_top_btn"><img src="fonts/VpaeRs9hQaSf.svg" alt></a>

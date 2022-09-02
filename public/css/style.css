@@ -164,6 +164,11 @@ body .dblock {
     }
 }
 
+
+.mr-2{
+    margin-right: 16px !important;
+}
+
 .btn-small-gray {
     height: 50px;
     min-width: 150px;

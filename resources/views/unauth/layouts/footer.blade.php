@@ -26,7 +26,7 @@
   <!-- demo js -->
   <script src="js/MEMMBJ41rfu1.js"></script>
   <!-- main js -->
-  <script src="js/IkD8vHuGD5yd.js"></script>
+  <script src="js/main.js"></script>
 <script>
       var i = 0;
 
