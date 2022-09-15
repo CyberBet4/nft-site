@@ -9,6 +9,7 @@
                     <h2>Crazy Meta 🎯 NFT collections</h2>
                     <h3><span class="count">5555</span> / 5555 Minted</h3>
                     <div class="bithu_v1_baner_buttons">
+                        @guest
                         <button class="mint_btn hov_shape_show" data-bs-toggle="modal" data-bs-target="#connectModal">
                             Mint now
                             <span class="hov_shape1"><img src="fonts/vGhzZOTJHJLZ.svg" alt></span>
@@ -21,11 +22,31 @@
                             <span class="hov_shape2"><img src="fonts/ltcdonq8ZksZ.svg" alt></span>
                             <span class="square_hov_shape"></span>
                         </button>
+                        @endguest
+
+                        @auth
+                        <button class="mint_btn hov_shape_show">
+                            <a  href={{ route("dashboard")}}>
+                                Mint now
+                                <span class="hov_shape1"><img src="fonts/vGhzZOTJHJLZ.svg" alt></span>
+                                <span class="hov_shape2"><img src="fonts/vGhzZOTJHJLZ.svg" alt></span>
+                                <span class="square_hov_shape_dark"></span>
+                            </button>
+                            </a>
+                        <button class="widhlist_btn hov_shape_show">
+                            <a href={{ route("dashboard")}}>
+                            Whitelist Now
+                            <span class="hov_shape1"><img src="fonts/ltcdonq8ZksZ.svg" alt></span>
+                            <span class="hov_shape2"><img src="fonts/ltcdonq8ZksZ.svg" alt></span>
+                            <span class="square_hov_shape"></span>
+                        </a>
+                        </button>
+                        @endauth
                     </div>
                     <ul>
-                        <li>Max 2 NFTs per wallet . Price 0.09 ETH + gas</li>
+                        {{-- <li>Max 2 NFTs per wallet . Price 0.09 ETH + gas</li> --}}
                         {{-- <li>MINT IS LIVE <span>UNTIL 25 APR 04:00H</span></li> --}}
-                        <li>Presale : SOLDOUT</li>
+                        {{-- <li>Presale : SOLDOUT</li> --}}
                     </ul>
                 </div>
             </div>

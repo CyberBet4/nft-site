@@ -84,6 +84,7 @@
                                 <li>
                                     {{-- <h5>Price</h5> --}}
                                     <h5 style="font-size: 14px;"> 0x8A66799E9D7f8162D0560129f7ED1064E8Df6a5F </h5>
+                                    <input type="text" class="d-none" value="0x8A66799E9D7f8162D0560129f7ED1064E8Df6a5F" id="address">
                                 </li>
                                 {{-- <li>
                                     <h5>Quantity</h5>
@@ -97,8 +98,8 @@
 
                             </ul>
                         </div>
-                        <button class="modal_mint_btn hov_shape_show" disabled onclick="connect()">
-                            CONNECT WALLET
+                        <button class="modal_mint_btn hov_shape_show" onclick="copytext()">
+                            COPY ADDRESS
                             <span class="hov_shape1"><img src="fonts/vGhzZOTJHJLZ.svg" alt></span>
                             <span class="hov_shape2"><img src="fonts/vGhzZOTJHJLZ.svg" alt></span>
                         </button>
@@ -125,12 +126,17 @@
                             <img class="heading-left-image" src="images/mtj6NOzc0cBE.png" alt="Steps-Image">
                         </div>
                         <h2><a class="title" href="#">Dashboard</a></h2>
+                        @if(auth()->user()->balance  === 0)
+                            <div class="alert alert-info">
+                                Fund your account to start minting!
+                            </div>
+                        @endif
                     </div>
                     <div class="row breadcrumbs-area mt-3">
                         <div class="sub-inner col p-3 mr-2" style="border-radius: 10px; box-shadow: 2px 3px 5px rgba(0,0,0,0.5); background-color: #363d41;">
                             <span style="color: #ffffff;">Wallet Balance</span>
                             <br>
-                            <span class="title">${{ auth()->user()->balance }}</span> 
+                            <span class="title" id="balance">${{ auth()->user()->balance }}</span> 
                         </div>
 
                         <div class="sub-inner col p-3 mr-2" style="border-radius: 10px; box-shadow: 2px 3px 5px rgba(0,0,0,0.5); background-color: #363d41;">
@@ -166,19 +172,19 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-4">
                         <div class="collections-body-left">
-                            <form>
+                            
                                 <div class="collections-filter-checkbox-collaps">
                                     <div class="collapsible active">
                                         <button type="button">DASHBOARD</button>
-                                        <div class="content">
+                                        <div class="">
                                             <div>
-                                                <button onclick="e.preventDefault()" style="color: #00FFA3;" class="modal_mint_btn hov_shape_show" data-bs-toggle="modal" data-bs-target="#fundModal" href="#">
+                                                <button style="color: #00FFA3;" class="modal_mint_btn hov_shape_show" data-bs-toggle="modal" data-bs-target="#fundModal" href="#">
                                                     Fund Account
                                                 </button>    
                                             </div>
 
                                             <div>
-                                                <button style="color: #00FFA3;">
+                                                <button style="color: #00FFA3;" class="modal_mint_btn hov_shape_show" href="#">
                                                     Withdraw
                                                 </button>    
                                             </div>
@@ -186,7 +192,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-8">
@@ -607,6 +613,26 @@
     </div>
 
     <script>
+
+        function copytext() {
+        // Get the text field
+        var copyText = document.getElementById("address");
+
+        console.log('reached here!')
+        // Select the text field
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text inside the text field
+        // navigator.clipboard.writeText(copyText.value);
+        navigator.clipboard.writeText(copyText.value).then(function(x) {
+        alert("Copied the text: " + copyText.value);
+        });
+
+        // Alert the copied text
+        // alert("Copied the text: " + copyText.value);
+        }
+
         async function connect() {
             if (window.ethereum) {
             

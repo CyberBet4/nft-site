@@ -13,9 +13,9 @@
                     <ul>
                         <li><a href={{ route("home")}}>Home</a></li>
                         {{-- <li><a href="#about">About</a></li> --}}
-                        <li><a href="#roadmap">Roadmap</a></li>
+                        <li><a href={{ route("home") . "#roadmap"}}>Roadmap</a></li>
                         <li><a href={{ route("collection")}}>Collection</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href={{ route("home") . "#faq"}}>FAQ</a></li>
                         <li><a href={{ route("about")}}>About Us</a></li>
                     </ul>   
                 </div>
@@ -80,11 +80,11 @@
                 </div>
                 <div class="bithu_mobile_menu_list">
                     <ul>
-                        <li class="mobile-menu-hide"><a href="#home">Home</a></li>
+                        <li class="mobile-menu-hide"><a href={{ route("home")}}>Home</a></li>
                         {{-- <li class="mobile-menu-hide"><a href="#about">About</a></li> --}}
-                        <li class="mobile-menu-hide"><a href="#roadmap">Roadmap</a></li>
+                        <li class="mobile-menu-hide"><a href={{ route("home") . "#roadmap" }}>Roadmap</a></li>
                         <li class="mobile-menu-hide"><a href={{ route("collection")}}>Collection</a></li>
-                        <li class="mobile-menu-hide"><a href="#faq">FAQ</a></li>
+                        <li class="mobile-menu-hide"><a href={{ route("home") . "#faq"}}>FAQ</a></li>
                         <li class="mobile-menu-hide"><a href={{ route("about")}}>About Us</a></li>
                     </ul>
                 </div>
@@ -94,14 +94,49 @@
                         <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
                     </ul>
+
+                    @auth
+                        <div class="connect-btn-wrapper w-100">
+                            <a href={{ route("dashboard")}} class="connect_btn hov_shape_show mobile-menu-hide">
+                                Dashboard
+                                <span class="hov_shape1"><img src="fonts/dle9yZdldMMf.svg" alt></span>
+                                <span class="hov_shape2"><img src="fonts/dle9yZdldMMf.svg" alt></span>
+                                <span class="square_hov_shape"></span>
+                            </a>
+                        </div>
+
+                        <div class="connect-btn-wrapper w-100">
+                            <form action={{ route("logout")}} method="post">
+                                @csrf
+                            <button class="connect_btn hov_shape_show mobile-menu-hide">
+                                Logout
+                                <span class="hov_shape1"><img src="fonts/dle9yZdldMMf.svg" alt></span>
+                                <span class="hov_shape2"><img src="fonts/dle9yZdldMMf.svg" alt></span>
+                                <span class="square_hov_shape"></span>
+                            </button>
+                            </form>
+                        </div>
+                    @endauth
+
+                    @guest
                     <div class="connect-btn-wrapper w-100">
                         <button class="connect_btn hov_shape_show mobile-menu-hide" data-bs-toggle="modal" data-bs-target="#connectModal">
-                            <img src="fonts/q8IEPqIkVjHt.svg" alt>Connect
+                            Sign Up
                             <span class="hov_shape1"><img src="fonts/dle9yZdldMMf.svg" alt></span>
                             <span class="hov_shape2"><img src="fonts/dle9yZdldMMf.svg" alt></span>
                             <span class="square_hov_shape"></span>
                         </button>
                     </div>
+
+                    <div class="connect-btn-wrapper w-100">
+                        <button class="connect_btn hov_shape_show mobile-menu-hide" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Log In
+                            <span class="hov_shape1"><img src="fonts/dle9yZdldMMf.svg" alt></span>
+                            <span class="hov_shape2"><img src="fonts/dle9yZdldMMf.svg" alt></span>
+                            <span class="square_hov_shape"></span>
+                        </button>
+                    </div>
+                    @endguest
                 </div>
             </div>
         </div>

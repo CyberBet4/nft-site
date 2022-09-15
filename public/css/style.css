@@ -905,10 +905,12 @@ body .modal-backdrop {
     color: #FFFFFF;
     text-transform: uppercase;
 }
-.mobile_menu_btns button.join_btn img{
+.mobile_menu_btns button.join_btn img,
+.mobile_menu_btns a.join_btn img{
     margin-right: 14px;
 }
-.mobile_menu_btns button.connect_btn {
+.mobile_menu_btns button.connect_btn,
+.mobile_menu_btns a.connect_btn {
     height: 50px;
     width: 100%;
     background: rgba(255, 255, 255, 0.2);
@@ -916,7 +918,17 @@ body .modal-backdrop {
     box-sizing: border-box;
     margin-top: 20px;
 }
-.mobile_menu_btns button.connect_btn{
+
+a.connect_btn.hov_shape_show.mobile-menu-hide{
+    height: 50px !important;
+    width: 100% !important;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.mobile_menu_btns button.connect_btn,
+.mobile_menu_btns a.connect_btn{
     font-family: 'Bakbak One';
     font-style: normal;
     font-weight: 400;
@@ -926,10 +938,12 @@ body .modal-backdrop {
     color: #FFFFFF;
     text-transform: uppercase;
 }
-.mobile_menu_btns button.connect_btn img{
+.mobile_menu_btns button.connect_btn img,
+.mobile_menu_btns a.connect_btn img{
     margin-right: 14px;
 }
-.mobile_menu_btns button.connect_btn span img{
+.mobile_menu_btns button.connect_btn span img,
+.mobile_menu_btns a.connect_btn span img{
     margin: 0px;
 }
 

@@ -94,7 +94,7 @@
                         </button>
                     </div>
                     <div class="modal_body text-center">
-                        <p>Sign up to start minting</p>
+                        <p>Sign In to start minting</p>
                         <div class="connect-section">
                             <form action={{route("login")}} method="post">
                             @csrf
