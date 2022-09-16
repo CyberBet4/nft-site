@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-// use Illuminate\Foundation\Auth\User;
-use Illuminate\Routing\Controller;
+// use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -19,27 +19,29 @@ class RegisterController extends Controller
 
     // Register a user
     public function register(Request $request){
-        // dd($request->name);
 
-
-         //validate form data
-        //  $this->validate($request, [
-        //     'name' => 'required|string|max:255',
-        //     'email' => 'required|string|email|max:255|unique:users',
-        //     'password' => 'required|confirmed',
-        // ]);
-
-        //create a new user
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+        //validate form data
+         $this->validate($request, [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required',
         ]);
 
+        //     //create a new user
+                User::create([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'password' => Hash::make($request->password),
+                ]);
+        
         //login user
-        auth()->attempt($request->only(['email', 'password']));
+        if(auth()->attempt($request->only(['email', 'password']))){
 
-        //redirect to dashboard if authenticated
-        return redirect()->route('dashboard');
+            //redirect to dashboard if authenticated
+            return redirect()->route('dashboard');
+        }else{
+            return redirect()->route('home');
+        };
+
     }
 }

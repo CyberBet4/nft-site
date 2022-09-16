@@ -33,7 +33,7 @@
                     <div class="connect-btn-wrapper">
                         <form action={{ route("logout")}} method="post">
                         @csrf
-                        <button class="connect_btn hov_shape_show" data-bs-toggle="modal" data-bs-target="#connectModal">
+                        <button class="connect_btn hov_shape_show">
                             {{-- <img src="fonts/q8IEPqIkVjHt.svg" alt>CONNECT --}}
                             Logout
                             <span class="hov_shape1"><img src="fonts/dle9yZdldMMf.svg" alt></span>
