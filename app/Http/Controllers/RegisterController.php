@@ -20,7 +20,7 @@ class RegisterController extends Controller
     // Register a user
     public function register(Request $request){
 
-        //validate form data
+            //validate form data
          $this->validate($request, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -41,6 +41,7 @@ class RegisterController extends Controller
             return redirect()->route('dashboard');
         }else{
             return redirect()->route('home');
+            // dd($request->all());
         };
 
     }
